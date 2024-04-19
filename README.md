@@ -30,11 +30,12 @@ The folder structure must follow the pattern:
 ```
 --- src
 ------ modules
---------- user // DTOs, Use Cases and Controller from App User
+--------- user // DTOs, Use Cases and Controller from User
 --------- index.ts // The main controller. We need to import all controllers here
 ```
 
 
+### notes
 
 - anotar sobre arquitetura
 - fazer mer no draw.io e colar aqui
