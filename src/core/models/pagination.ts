@@ -23,7 +23,7 @@ export interface ISearchParameterUser extends ISearchParameterBase {
 }
 
 export interface ISearchParameterTransaction extends ISearchParameterBase {
-  amount?: string;
+  amount?: number;
   name?: string;
   method?: TransactionType;
   document?: string;

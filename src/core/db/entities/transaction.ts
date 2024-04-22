@@ -10,7 +10,7 @@ export class TransactionsEntity extends BaseEntity {
     type: 'int4',
     nullable: false,
   })
-  public amount: string;
+  public amount: number;
 
   @Column({
     type: 'varchar',

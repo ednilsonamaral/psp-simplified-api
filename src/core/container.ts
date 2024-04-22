@@ -1,5 +1,6 @@
 import { Container } from 'inversify';
 
+import { CreateTransactionUseCase, GetAllTransactionsUseCase, GetTransactionUseCase, ICreateTransactionUseCase, IGetAllTransactionsUseCase, IGetTransactionUseCase } from '@src/modules/transaction/use-cases';
 import { CreateUserUseCase, DeleteUserUseCase, GetAllUsersUseCase, GetUserUseCase, ICreateUserUseCase, IDeleteUserUseCase, IGetAllUsersUseCase, IGetUserUseCase, IUpdateUserUseCase, UpdateUserUseCase } from '@src/modules/user/use-cases';
 
 import {
@@ -11,6 +12,7 @@ import {
 import Types from '@core/types';
 
 import {
+  TransactionController,
   UserController,
 } from '@modules';
 
@@ -41,9 +43,24 @@ container
   .bind<IDeleteUserUseCase>(Types.DeleteUserUseCase)
   .to(DeleteUserUseCase);
 
+// User UseCases
+container
+  .bind<ICreateTransactionUseCase>(Types.CreateTransactionUseCase)
+  .to(CreateTransactionUseCase);
+container
+  .bind<IGetTransactionUseCase>(Types.GetTransactionUseCase)
+  .to(GetTransactionUseCase);
+container
+  .bind<IGetAllTransactionsUseCase>(Types.GetAllTransactionsUseCase)
+  .to(GetAllTransactionsUseCase);
+
 // Controllers
 container
   .bind(UserController)
+  .toSelf();
+
+container
+  .bind(TransactionController)
   .toSelf();
 
 export { container };

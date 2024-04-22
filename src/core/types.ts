@@ -9,6 +9,11 @@ const Types = {
   GetUserUseCase: 'GetUserUseCase',
   GetAllUsersUseCase: 'GetAllUsersUseCase',
   DeleteUserUseCase: 'DeleteUserUseCase',
+
+  // Transaction Use Cases
+  CreateTransactionUseCase: 'CreateTransactionUseCase',
+  GetTransactionUseCase: 'GetTransactionUseCase',
+  GetAllTransactionsUseCase: 'GetAllTransactionsUseCase',
 };
 
 export default Types;
