@@ -21,6 +21,11 @@ export interface IConstants {
       idle: number;
     };
   };
+
+  feesValues: {
+    pixFeesValue: string;
+    creditCardFeesValue: string;
+  }
 }
 
 export interface IEnvironmentSecrets {
@@ -40,4 +45,7 @@ export interface IEnvironmentSecrets {
   DATABASE_POOL_MIN: string;
   DATABASE_ACQUIRE: string;
   DATABASE_IDLE: string;
+
+  FEES_VALUE_PIX: string;
+  FEES_VALUE_CREDIT_CARD: string;
 }

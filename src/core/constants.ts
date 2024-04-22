@@ -49,6 +49,11 @@ const setConstants = () => {
     },
   };
 
+  Constants.feesValues = {
+    pixFeesValue: config.FEES_VALUE_PIX,
+    creditCardFeesValue: config.FEES_VALUE_CREDIT_CARD,
+  };
+
 };
 
 const setLuxon = () => {

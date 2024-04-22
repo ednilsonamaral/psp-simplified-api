@@ -17,6 +17,9 @@ const Schema = z.object({
   DATABASE_POOL_MIN: z.string().default('1'),
   DATABASE_ACQUIRE: z.string().default('10000'),
   DATABASE_IDLE: z.string().default('20000'),
+
+  FEES_VALUE_PIX: z.string(),
+  FEES_VALUE_CREDIT_CARD: z.string(),
 });
 
 export default Schema;
