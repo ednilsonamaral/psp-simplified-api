@@ -1,3 +1,5 @@
+import { TransactionType } from '@src/shared/enumerators';
+
 export interface Pagination<T> {
   rows: T[];
   count: number;
@@ -17,5 +19,12 @@ export interface ISearchParameterBase {
 export interface ISearchParameterUser extends ISearchParameterBase {
   name?: string;
   email?: string;
+  document?: string;
+}
+
+export interface ISearchParameterTransaction extends ISearchParameterBase {
+  amount?: string;
+  name?: string;
+  method?: TransactionType;
   document?: string;
 }

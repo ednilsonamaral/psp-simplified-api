@@ -3,7 +3,9 @@ import { Container } from 'inversify';
 import { CreateUserUseCase, DeleteUserUseCase, GetAllUsersUseCase, GetUserUseCase, ICreateUserUseCase, IDeleteUserUseCase, IGetAllUsersUseCase, IGetUserUseCase, IUpdateUserUseCase, UpdateUserUseCase } from '@src/modules/user/use-cases';
 
 import {
+  ITransactionRepository,
   IUserRepository,
+  TransactionRepository,
   UserRepository,
 } from '@core/db/repositories';
 import Types from '@core/types';
@@ -18,6 +20,9 @@ const container: Container = new Container();
 container
   .bind<IUserRepository>(Types.UserRepository)
   .to(UserRepository);
+container
+  .bind<ITransactionRepository>(Types.TransactionRepository)
+  .to(TransactionRepository);
 
 // User UseCases
 container
