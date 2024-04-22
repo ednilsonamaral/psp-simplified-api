@@ -2,6 +2,7 @@ const Types = {
   // Repositories
   UserRepository: 'UserRepository',
   TransactionRepository: 'TransactionRepository',
+  PayableRepository: 'PayableRepository',
 
   // User Use Cases
   CreateUserUseCase: 'CreateUserUseCase',

@@ -4,8 +4,10 @@ import { CreateTransactionUseCase, GetAllTransactionsUseCase, GetTransactionUseC
 import { CreateUserUseCase, DeleteUserUseCase, GetAllUsersUseCase, GetUserUseCase, ICreateUserUseCase, IDeleteUserUseCase, IGetAllUsersUseCase, IGetUserUseCase, IUpdateUserUseCase, UpdateUserUseCase } from '@src/modules/user/use-cases';
 
 import {
+  IPayableRepository,
   ITransactionRepository,
   IUserRepository,
+  PayableRepository,
   TransactionRepository,
   UserRepository,
 } from '@core/db/repositories';
@@ -25,6 +27,9 @@ container
 container
   .bind<ITransactionRepository>(Types.TransactionRepository)
   .to(TransactionRepository);
+container
+  .bind<IPayableRepository>(Types.PayableRepository)
+  .to(PayableRepository);
 
 // User UseCases
 container

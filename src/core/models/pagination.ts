@@ -1,4 +1,4 @@
-import { TransactionType } from '@src/shared/enumerators';
+import { PayableStatusType, TransactionType } from '@src/shared/enumerators';
 
 export interface Pagination<T> {
   rows: T[];
@@ -27,4 +27,8 @@ export interface ISearchParameterTransaction extends ISearchParameterBase {
   name?: string;
   method?: TransactionType;
   document?: string;
+}
+
+export interface ISearchParameterPayable extends ISearchParameterBase {
+  status?: PayableStatusType;
 }
