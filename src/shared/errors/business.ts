@@ -22,5 +22,6 @@ export const BusinessErrorCodes = {
   INTERNAL_SERVER_ERROR: 'internal_server_error',
   USER_NOT_FOUND: 'user_not_found',
   USER_ALREADY_REGISTERED: 'user_already_registered',
-  TRANSACTION_NOT_FOUND: 'user_not_found',
+  TRANSACTION_NOT_FOUND: 'transaction_not_found',
+  PAYABLE_NOT_FOUND: 'payable_not_found',
 };

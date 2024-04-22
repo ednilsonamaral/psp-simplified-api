@@ -1,5 +1,6 @@
 import { Container } from 'inversify';
 
+import { CreatePayableUseCase, GetAllPayablesUseCase, GetPayableUseCase, ICreatePayableUseCase, IGetAllPayablesUseCase, IGetPayableUseCase } from '@src/modules/payable/use-cases';
 import { CreateTransactionUseCase, GetAllTransactionsUseCase, GetTransactionUseCase, ICreateTransactionUseCase, IGetAllTransactionsUseCase, IGetTransactionUseCase } from '@src/modules/transaction/use-cases';
 import { CreateUserUseCase, DeleteUserUseCase, GetAllUsersUseCase, GetUserUseCase, ICreateUserUseCase, IDeleteUserUseCase, IGetAllUsersUseCase, IGetUserUseCase, IUpdateUserUseCase, UpdateUserUseCase } from '@src/modules/user/use-cases';
 
@@ -14,6 +15,7 @@ import {
 import Types from '@core/types';
 
 import {
+  PayableController,
   TransactionController,
   UserController,
 } from '@modules';
@@ -48,7 +50,7 @@ container
   .bind<IDeleteUserUseCase>(Types.DeleteUserUseCase)
   .to(DeleteUserUseCase);
 
-// User UseCases
+// Transaction UseCases
 container
   .bind<ICreateTransactionUseCase>(Types.CreateTransactionUseCase)
   .to(CreateTransactionUseCase);
@@ -59,6 +61,17 @@ container
   .bind<IGetAllTransactionsUseCase>(Types.GetAllTransactionsUseCase)
   .to(GetAllTransactionsUseCase);
 
+// Payable UseCases
+container
+  .bind<ICreatePayableUseCase>(Types.CreatePayableUseCase)
+  .to(CreatePayableUseCase);
+container
+  .bind<IGetPayableUseCase>(Types.GetPayableUseCase)
+  .to(GetPayableUseCase);
+container
+  .bind<IGetAllPayablesUseCase>(Types.GetAllPayablesUseCase)
+  .to(GetAllPayablesUseCase);
+
 // Controllers
 container
   .bind(UserController)
@@ -66,6 +79,10 @@ container
 
 container
   .bind(TransactionController)
+  .toSelf();
+
+container
+  .bind(PayableController)
   .toSelf();
 
 export { container };

@@ -15,6 +15,11 @@ const Types = {
   CreateTransactionUseCase: 'CreateTransactionUseCase',
   GetTransactionUseCase: 'GetTransactionUseCase',
   GetAllTransactionsUseCase: 'GetAllTransactionsUseCase',
+
+  // Payable Use Cases
+  CreatePayableUseCase: 'CreatePayableUseCase',
+  GetPayableUseCase: 'GetPayableUseCase',
+  GetAllPayablesUseCase: 'GetAllPayablesUseCase',
 };
 
 export default Types;
