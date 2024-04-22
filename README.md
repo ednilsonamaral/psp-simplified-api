@@ -15,7 +15,7 @@
 
 ### Postman Collections
 
-You can import this file `.json` in your Postman or Insomnia to test all avaible endpoints.
+You can import this file `psp-simplified-api.postman_collection.json` in your Postman or Insomnia to test all avaible endpoints.
 
 
 ### Database migrations?
@@ -59,4 +59,5 @@ For this challenge we will focus especially on the first specified function, "ca
 
 - Authentication and authorization, with JWT or Keycloak. The Keycloak options its better if you need to integrate SSO.  
 - A new Entity call Clients, to manage clients and dont save this informations in Transaction.  
-- Remove fees values from env variables, create a entity for this feature.
+- Remove fees values from env variables, create a entity for this feature.  
+- Unit tests.
